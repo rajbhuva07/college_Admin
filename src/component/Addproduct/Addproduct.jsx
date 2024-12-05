@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Addproduct.css';
 import upload_area from '../../assets/upload_area.svg';
-import { ImagetoBase64 } from '../../../../../fronted/src/utility/imageToBase64';
+// import { ImagetoBase64 } from '../../../../../fronted/src/utility/imageToBase64';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -67,14 +67,15 @@ const Addproduct = () => {
     };
 
     const uploadImage = async (e) => {
-        const imageData = await ImagetoBase64(e.target.files[0]);
-        setData((prev) => {
-            return {
-                ...prev,
-                image: imageData
-            };
-        });
+        // const imageData = await ImagetoBase64(e.target.files[0]);
+        // setData((prev) => {
+        //     return {
+        //         ...prev,
+        //         image: imageData
+        //     };
+        // });
     };
+
 
     const [categories, setCategories] = useState([]);
 
