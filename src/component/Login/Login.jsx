@@ -174,6 +174,7 @@ function Login() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ email, password }),
+                
             });
 
             if (response.ok) {
