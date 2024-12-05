@@ -28,9 +28,11 @@ const Admin = () => {
     return (
         <div>
             <div className='admin'>
-                {isLoggedIn && <Slidebar />}
+                {/* {isLoggedIn && */}
+                    <Slidebar />
+               
                 <Routes>
-                    <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+                    {/* <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} /> */}
                     {/* {isLoggedIn && ( */}
                         <>
                             <Route path='/' element={<Details />} />
