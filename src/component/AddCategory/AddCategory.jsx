@@ -13,7 +13,7 @@ const AddCategory = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('http://localhost:8081/categories');
+                const response = await fetch('https://finalproject-backend-chi.vercel.app/categories');
                 if (response.ok) {
                     const categoriesData = await response.json();
                     setCategories(categoriesData);
@@ -32,7 +32,7 @@ const AddCategory = () => {
         if (id) {
             const fetchCategoryData = async () => {
                 try {
-                    const response = await fetch(`http://localhost:8081/categories/${id}`);
+                    const response = await fetch(`https://finalproject-backend-chi.vercel.app/categories/${id}`);
                     if (response.ok) {
                         const category = await response.json();
                         setCategoryData(category);
@@ -67,7 +67,7 @@ const AddCategory = () => {
                 body: JSON.stringify(categoryData)
             };
 
-            const response = await fetch(`http://localhost:8081/categories${id ? `/${id}` : ''}`, requestOptions);
+            const response = await fetch(`https://finalproject-backend-chi.vercel.app/categories${id ? `/${id}` : ''}`, requestOptions);
 
             if (response.ok) {
                 const data = await response.json();
@@ -96,7 +96,7 @@ const AddCategory = () => {
     const handleDelete = async (categoryId) => {
         if (window.confirm('Are you sure you want to delete this category?')) {
             try {
-                const response = await fetch(`http://localhost:8081/categories/${categoryId}`, {
+                const response = await fetch(`https://finalproject-backend-chi.vercel.app/categories/${categoryId}`, {
                     method: 'DELETE'
                 });
 

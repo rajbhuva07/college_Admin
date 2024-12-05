@@ -23,7 +23,7 @@ const ListProduct = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:8081/products');
+            const response = await fetch('https://finalproject-backend-chi.vercel.app/products');
             if (response.ok) {
                 const productData = await response.json();
                 setProducts(productData);
@@ -41,7 +41,7 @@ const ListProduct = () => {
 
     // const removeItem = async (productId) => {
     //     try {
-    //         const response = await fetch(`http://localhost:8081/removeProduct/${productId}`, {
+    //         const response = await fetch(`https://finalproject-backend-chi.vercel.app/removeProduct/${productId}`, {
     //             method: 'delete',
     //         });
 
@@ -58,7 +58,7 @@ const ListProduct = () => {
         const confirmed = window.confirm("Are you sure you want to delete this item?");
         if (confirmed) {
             try {
-                const response = await fetch(`http://localhost:8081/removeProduct/${productId}`, {
+                const response = await fetch(`https://finalproject-backend-chi.vercel.app/removeProduct/${productId}`, {
                     method: 'delete',
                 });
 

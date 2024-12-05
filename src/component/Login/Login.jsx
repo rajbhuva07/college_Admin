@@ -13,7 +13,7 @@
 // //         e.preventDefault();
 
 // //         try {
-// //             const response = await fetch('http://localhost:8081/admin/login', {
+// //             const response = await fetch('https://finalproject-backend-chi.vercel.app/admin/login', {
 // //                 method: 'POST',
 // //                 headers: {
 // //                     'Content-Type': 'application/json'
@@ -98,7 +98,7 @@
 //         e.preventDefault();
 
 //         try {
-//             const response = await fetch('http://localhost:8081/login', {
+//             const response = await fetch('https://finalproject-backend-chi.vercel.app/login', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8081/admin/login', {
+            const response = await fetch('https://finalproject-backend-chi.vercel.app/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

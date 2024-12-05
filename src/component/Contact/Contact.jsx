@@ -11,7 +11,7 @@ const Contact = () => {
     const fetchSubmissions = async () => {
         try {
             // Fetch contact form submissions from the backend
-            const response = await fetch('http://localhost:8081/contact');
+            const response = await fetch('https://finalproject-backend-chi.vercel.app/contact');
             if (response.ok) {
                 const submissionsData = await response.json();
                 setSubmissions(submissionsData);

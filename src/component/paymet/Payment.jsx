@@ -9,7 +9,7 @@ function Orders() {
 
     const fetchOrders = async () => {
         try {
-            const response = await fetch(`http://localhost:8081/orders`);
+            const response = await fetch(`https://finalproject-backend-chi.vercel.app/orders`);
             if (response.ok) {
                 const ordersData = await response.json();
                 setOrders(ordersData);
@@ -23,7 +23,7 @@ function Orders() {
 
     const handleStatusChange = async (orderId, status) => {
         try {
-            await fetch(`http://localhost:8081/orders/${orderId}/status`, {
+            await fetch(`https://finalproject-backend-chi.vercel.app/orders/${orderId}/status`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
