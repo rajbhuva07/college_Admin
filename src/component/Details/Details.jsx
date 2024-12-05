@@ -13,10 +13,10 @@ const Details = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const productResponse = await fetch('https://finalproject-backend-chi.vercel.app/products');
-                const userResponse = await fetch('https://finalproject-backend-chi.vercel.app/users');
-                const categoryResponse = await fetch('https://finalproject-backend-chi.vercel.app/categories');
-                const contactResponse = await fetch('https://finalproject-backend-chi.vercel.app/contact');
+                const productResponse = await fetch('https://college-backend.vercel.app/products');
+                const userResponse = await fetch('https://college-backend.vercel.app/users');
+                const categoryResponse = await fetch('https://college-backend.vercel.app/categories');
+                const contactResponse = await fetch('https://college-backend.vercel.app/contact');
 
                 if (productResponse.ok && userResponse.ok && categoryResponse.ok && contactResponse.ok) {
                     const productsData = await productResponse.json();

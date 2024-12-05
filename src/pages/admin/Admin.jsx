@@ -15,25 +15,23 @@ const Admin = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
 
-    // useEffect(() => {
+    useEffect(() => {
        
-    //     const loggedIn = localStorage.getItem('isLoggedIn');
-    //     if (loggedIn === 'true') {
-    //         setIsLoggedIn(true);
-    //     } else {
+        const loggedIn = localStorage.getItem('isLoggedIn');
+        if (loggedIn === 'true') {
+            setIsLoggedIn(true);
+        } else {
             
-    //         navigate('/login');
-    //     }
-    // }, [navigate]);
+            navigate('/login');
+        }
+    }, [navigate]);
     return (
         <div>
             <div className='admin'>
-                {/* {isLoggedIn && */}
-                    <Slidebar />
-               
+                {isLoggedIn && <Slidebar />}
                 <Routes>
-                    {/* <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} /> */}
-                    {/* {isLoggedIn && ( */}
+                    <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+                    {isLoggedIn && (
                         <>
                             <Route path='/' element={<Details />} />
                             <Route path='/addproduct' element={<Addproduct />} />
@@ -46,7 +44,7 @@ const Admin = () => {
                             <Route path='/categories/:id' element={<AddCategory />} />
                             {/* <Route path='/logout' element={<Logout onLogout={() => } />} /> */}
                         </>
-                    {/* )} */}
+                    )}
                 </Routes>
             </div>
         </div>

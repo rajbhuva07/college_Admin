@@ -13,7 +13,7 @@
 // //         e.preventDefault();
 
 // //         try {
-// //             const response = await fetch('https://finalproject-backend-chi.vercel.app/admin/login', {
+// //             const response = await fetch('https://college-backend.vercel.app/admin/login', {
 // //                 method: 'POST',
 // //                 headers: {
 // //                     'Content-Type': 'application/json'
@@ -98,7 +98,7 @@
 //         e.preventDefault();
 
 //         try {
-//             const response = await fetch('https://finalproject-backend-chi.vercel.app/login', {
+//             const response = await fetch('https://college-backend.vercel.app/login', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -168,13 +168,12 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch('https://finalproject-backend-chi.vercel.app/admin/login', {
+            const response = await fetch('https://college-backend.vercel.app/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ email, password }),
-                
             });
 
             if (response.ok) {

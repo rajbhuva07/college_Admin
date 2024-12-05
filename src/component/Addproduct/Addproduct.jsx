@@ -29,7 +29,7 @@ const Addproduct = () => {
         if (id) {
             const fetchProduct = async () => {
                 try {
-                    const response = await fetch(`https://finalproject-backend-chi.vercel.app/editproduct/${id}`, {
+                    const response = await fetch(`https://college-backend.vercel.app/editproduct/${id}`, {
                         method: 'PUT',
                     });
 
@@ -82,7 +82,7 @@ const Addproduct = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://finalproject-backend-chi.vercel.app/categories');
+                const response = await fetch('https://college-backend.vercel.app/categories');
                 if (response.ok) {
                     const categoriesData = await response.json();
                     setCategories(categoriesData);
@@ -135,7 +135,7 @@ const Addproduct = () => {
 
         try {
             // Determine whether to add or update the product based on the presence of ID
-            const url = id ? `https://finalproject-backend-chi.vercel.app/editproduct/${id}` : 'https://finalproject-backend-chi.vercel.app/uploadProduct';
+            const url = id ? `https://college-backend.vercel.app/editproduct/${id}` : 'https://college-backend.vercel.app/uploadProduct';
             const method = id ? 'PUT' : 'POST'; // Use 'PUT' for update, 'POST' for add
 
             const fetchData = await fetch(url, {
@@ -255,7 +255,7 @@ export default Addproduct;
 //         if (id) {
 //             const fetchProduct = async () => {
 //                 try {
-//                     const response = await fetch(`https://finalproject-backend-chi.vercel.app/editproduct/${id}`, {
+//                     const response = await fetch(`https://college-backend.vercel.app/editproduct/${id}`, {
 //                         method: 'PUT',
 //                     });
 
@@ -287,7 +287,7 @@ export default Addproduct;
 //     //     if (id) {
 //     //         const fetchProduct = async () => {
 //     //             try {
-//     //                 const response = await fetch(`https://finalproject-backend-chi.vercel.app/editproduct/${id}`, {
+//     //                 const response = await fetch(`https://college-backend.vercel.app/editproduct/${id}`, {
 //     //                     method: 'PUT',
 //     //                 });
 
@@ -345,7 +345,7 @@ export default Addproduct;
 
 //     //     if (name && image && category && price) {
 //     //         try {
-//     //             const fetchData = await fetch(`https://finalproject-backend-chi.vercel.app/uploadProduct`, {
+//     //             const fetchData = await fetch(`https://college-backend.vercel.app/uploadProduct`, {
 //     //                 method: 'POST',
 //     //                 headers: {
 //     //                     'Content-Type': 'application/json',
@@ -383,7 +383,7 @@ export default Addproduct;
 //     useEffect(() => {
 //         const fetchCategories = async () => {
 //             try {
-//                 const response = await fetch('https://finalproject-backend-chi.vercel.app/categories');
+//                 const response = await fetch('https://college-backend.vercel.app/categories');
 //                 if (response.ok) {
 //                     const categoriesData = await response.json();
 //                     setCategories(categoriesData);
@@ -438,7 +438,7 @@ export default Addproduct;
 
 //         try {
 //             // Determine whether to add or update the product based on the presence of ID
-//             const url = id ? `https://finalproject-backend-chi.vercel.app/editproduct/${id}` : 'https://finalproject-backend-chi.vercel.app/uploadProduct';
+//             const url = id ? `https://college-backend.vercel.app/editproduct/${id}` : 'https://college-backend.vercel.app/uploadProduct';
 //             const method = id ? 'PUT' : 'POST'; // Use 'PUT' for update, 'POST' for add
 
 //             const fetchData = await fetch(url, {
@@ -505,7 +505,7 @@ export default Addproduct;
 //     //     if (name && image && category && price) {
 //     //         try {
 //     //             // Determine whether to add or update the product based on the presence of ID
-//     //             const url = id ? `https://finalproject-backend-chi.vercel.app/editproduct/${id}` : 'https://finalproject-backend-chi.vercel.app/uploadProduct';
+//     //             const url = id ? `https://college-backend.vercel.app/editproduct/${id}` : 'https://college-backend.vercel.app/uploadProduct';
 //     //             const method = id ? 'PUT' : 'POST'; // Use 'PUT' for update, 'POST' for add
 
 //     //             const fetchData = await fetch(url, {

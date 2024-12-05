@@ -6,7 +6,7 @@ const Userdata = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch(`https://finalproject-backend-chi.vercel.app/users`);
+                const response = await fetch(`https://college-backend.vercel.app/users`);
                 if (response.ok) {
                     const data = await response.json();
                     setUsers(data);
@@ -25,7 +25,7 @@ const Userdata = () => {
     };
     const handleDataDeleteClick = async (userId) => {
         try {
-            const response = await fetch(`https://finalproject-backend-chi.vercel.app/users/${userId}`, {
+            const response = await fetch(`https://college-backend.vercel.app/users/${userId}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
