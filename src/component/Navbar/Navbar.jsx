@@ -6,16 +6,16 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
    
-    useEffect(() => {
-        const loggedIn = localStorage.getItem('isLoggedIn');
-        if (loggedIn === 'true') {
-            setIsLoggedIn(true);
-        } else {
-            navigate('/login');
-        }
-    }, [navigate]);
+    // useEffect(() => {
+    //     const loggedIn = localStorage.getItem('isLoggedIn');
+    //     if (loggedIn === 'true') {
+    //         setIsLoggedIn(true);
+    //     } else {
+    //         navigate('/login');
+    //     }
+    // }, [navigate]);
 
     const handleProfileClick = () => {
         // Clear logged-in status from localStorage
